@@ -1,0 +1,1666 @@
+{
+  "bounds": [
+    -180,
+    -85.05112877980659,
+    180,
+    85.05112877980659
+  ],
+  "center": [
+    0,
+    0,
+    4
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 22,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "shapefiles.mss",
+    "landcover.mss",
+    "water.mss",
+    "water-features.mss",
+    "roads.mss",
+    "power.mss",
+    "citywalls.mss",
+    "placenames.mss",
+    "buildings.mss",
+    "amenity-symbols.mss",
+    "stations.mss",
+    "amenity-points.mss",
+    "ferry-routes.mss",
+    "aerialways.mss",
+    "admin.mss",
+    "addressing.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "id": "world",
+      "class": "",
+      "Datasource": {
+        "file": "data/simplified-land-polygons-complete-3857/simplified_land_polygons.shp",
+        "type": "shape"
+      },
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "world"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "id": "coast-poly",
+      "class": "",
+      "Datasource": {
+        "file": "data/land-polygons-split-3857/land_polygons.shp",
+        "type": "shape"
+      },
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "coast-poly"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.12960815429688,
+        -52.982724914179855,
+        178.4432525634766,
+        70.87402746981634
+      ],
+      "id": "builtup",
+      "class": "",
+      "Datasource": {
+        "file": "data/world_boundaries/builtup_area.shp",
+        "type": "shape"
+      },
+      "srs-name": "mercator",
+      "srs": "+proj=merc +datum=WGS84 +over",
+      "advanced": {},
+      "name": "builtup"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -140.99778,
+        -54.89681,
+        141.03385176001382,
+        70.16419
+      ],
+      "id": "necountries",
+      "class": "",
+      "Datasource": {
+        "file": "data/ne_110m_admin_0_boundary_lines_land/ne_110m_admin_0_boundary_lines_land.shp",
+        "type": "shape"
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "necountries"
+    },
+       {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "landcover",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "landcover",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "landcover"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "landcover_line",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "landcover-line",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "landcover-line"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "water_lines_casing",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "water-lines-casing",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "water-lines-casing"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "water_lines_low_zoom",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "water-lines-low-zoom",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "water-lines-low-zoom"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "water_areas",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "water-areas",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "water-areas"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "water_areas_overlay",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "water-areas-overlay",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "water-areas-overlay"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "water_lines",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "water-lines",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "water-lines"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "dam",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "dam",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "dam"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "marinas_area",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "marinas-area",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "marinas-area"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "piers_area",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "piers-area",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "piers-area"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "piers",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "piers",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "piers"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "locks",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "locks",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "locks"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "buildings_lz",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "buildings-lz",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "buildings-lz"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "buildings",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "buildings",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "buildings"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "tunnels",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "tunnels",
+      "class": "tunnels-fill tunnels-casing access directions",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "tunnels",
+      "properties": {
+        "group-by": "layernotnull"
+      }
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "citywalls",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "citywalls",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "citywalls"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "castlewalls",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "castlewalls",
+      "class": "castlewalls",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "castlewalls"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "castlewalls_poly",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "castlewalls-poly",
+      "class": "castlewalls",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "castlewalls-poly"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "landuse_overlay",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "landuse-overlay",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "landuse-overlay"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "line_barriers",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "line-barriers",
+      "class": "barriers",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "line-barriers"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "cliffs",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "cliffs",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "cliffs"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "area_barriers",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "area-barriers",
+      "class": "barriers",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "area-barriers"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "tree_row",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "tree-row",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "tree-row"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427099,
+        179.99999692067183,
+        84.96651228427098
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "ferry_routes",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "ferry-routes",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "ferry-routes"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "highway_area_casing",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "highway-area-casing",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "highway-area-casing"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "roads_casing",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "roads-casing",
+      "class": "roads-casing",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "roads-casing"
+    },
+    {
+	  "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "highway_area_fill",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "highway-area-fill",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "highway-area-fill"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "roads_fill",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "roads-fill",
+      "class": "roads-fill access directions",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "roads-fill"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "aerialways",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "aerialways",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "aerialways"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "roads_low_zoom",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "roads-low-zoom",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "roads-low-zoom"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "waterway_bridges",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "waterway-bridges",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "waterway-bridges"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "bridges",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "bridges",
+      "class": "bridges-fill bridges-casing access directions",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "bridges",
+      "properties": {
+        "group-by": "layernotnull"
+      }
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "guideways",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "guideways",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "guideways"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "admin_01234",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "admin-01234",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "admin-01234"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "admin_5678",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "admin-5678",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "admin-5678"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "admin_other",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "admin-other",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "admin-other"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "power_minorline",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "power-minorline",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "power-minorline"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "power_line",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "power-line",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "power-line"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "placenames_large",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "placenames-large",
+      "class": "country state",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "placenames-large"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "placenames_capital",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "placenames-capital",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "placenames-capital"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "placenames_medium",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "placenames-medium",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "placenames-medium"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "placenames_small",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "placenames-small",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "placenames-small"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "stations",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "stations",
+      "class": "stations",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "stations"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "stations_poly",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "stations-poly",
+      "class": "stations",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "stations-poly"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "glaciers_text",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "glaciers-text",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "glaciers-text"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "amenity_symbols",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "amenity-symbols",
+      "class": "symbols",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "amenity-symbols"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "amenity_symbols_poly",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "amenity-symbols-poly",
+      "class": "symbols",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "amenity-symbols-poly"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "amenity_points",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "amenity-points",
+      "class": "points",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "amenity-points"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "amenity_points_poly",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "amenity-points-poly",
+      "class": "points",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "amenity-points-poly"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "power_towers",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "power-towers",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "power-towers"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "power_poles",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "power-poles",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "power-poles"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "roads_text_ref_low_zoom",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "roads-text-ref-low-zoom",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "roads-text-ref-low-zoom"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "highway_junctions",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "highway-junctions",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "highway-junctions"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "roads_text_ref",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "roads-text-ref",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "roads-text-ref"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "roads_area_text_name",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "roads-area-text-name",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "roads-area-text-name"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "roads_text_name",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "roads-text-name",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "roads-text-name"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "paths_text_name",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "paths-text-name",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "paths-text-name"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "text",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "text",
+      "class": "text",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "text"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "text_poly",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "text-poly",
+      "class": "text",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "text-poly"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "building_text",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "building-text",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "building-text"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "interpolation",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "interpolation",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "interpolation"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "housenumbers",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "housenumbers",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "housenumbers"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "housenames",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "housenames",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "housenames"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "water_lines_text",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "water-lines-text",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "water-lines-text"
+    },
+    {
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "admin_text",
+        "extent": "-20037508,-20037508,20037508,20037508",
+	"string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "admin-text",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "admin-text",
+      "geometry": "linestring"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "nature_reserve_boundaries",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "nature-reserve-boundaries",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "nature-reserve-boundaries"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.05112877980659,
+        179.99999692067183,
+        85.05112877980659
+      ],
+      "Datasource": {
+        "type": "ogr",
+        "layer": "theme_park",
+        "extent": "-20037508,-20037508,20037508,20037508",
+        "string": "MSSQL:server=.;database=gis;trusted_connection=yes;"
+
+
+      },
+      "id": "theme-park",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "theme-park"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "OpenStreetMap Carto",
+  "description": "A faithful reimplementation of the standard OpenStreetMap style"
+}
