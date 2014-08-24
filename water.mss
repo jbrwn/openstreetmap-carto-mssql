@@ -53,9 +53,9 @@
 }
 
 #glaciers-text {
-  [way_area >= 10000000][zoom >= 10],
-  [way_area >= 5000000][way_area < 10000000][zoom >= 11],
-  [way_area < 5000000][zoom >= 12] {
+  [ogr_geometry_area >= 10000000][zoom >= 10],
+  [ogr_geometry_area >= 5000000][ogr_geometry_area < 10000000][zoom >= 11],
+  [ogr_geometry_area < 5000000][zoom >= 12] {
     text-name: "[name]";
     text-size: 10;
     text-fill: #77f;

@@ -8,7 +8,7 @@
 
 #housenumbers {
   [zoom >= 17] {
-    text-name: "[addr:housenumber]";
+    text-name: "[addr_housenumber]";
     text-placement: interior;
     text-min-distance: 1;
     text-wrap-width: 0;
@@ -20,7 +20,7 @@
 
 #housenames {
   [zoom >= 17] {
-    text-name: "[addr:housename]";
+    text-name: "[addr_housename]";
     text-placement: interior;
     text-wrap-width: 20;
     text-face-name: @book-fonts;
@@ -33,9 +33,9 @@
 }
 
 #building-text {
-  [way_area >= 150000][zoom >= 14],
-  [way_area >= 80000][zoom >= 15],
-  [way_area >= 20000][zoom >= 16],
+  [ogr_geometry_area >= 150000][zoom >= 14],
+  [ogr_geometry_area >= 80000][zoom >= 15],
+  [ogr_geometry_area >= 20000][zoom >= 16],
   [zoom >= 17] {
     text-name: "[name]";
     text-size: 11;

@@ -1661,6 +1661,6 @@
   ],
   "scale": 1,
   "metatile": 2,
-  "name": "OpenStreetMap Carto",
+  "name": "OpenStreetMap Carto for SQL Server",
   "description": "A faithful reimplementation of the standard OpenStreetMap style"
 }
